@@ -9,13 +9,22 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.suhivv.udderaws"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.suhivv.udderaws",
+      "permissions": [
+        "android.permissions.READ_EXTERNAL_STORAGE",
+        "android.permissions.WRITE_EXTERNAL_STORAGE",
+        "android.permissions.ACCESS_EXTERNAL_STORAGE",
+        "android.permissions.CAMERA",
+        "android.permissions.RECORD_AUDIO"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -32,7 +41,24 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow udder-aws to acess your photos.",
+          "savePhotosPermission": "Allow udder-aws to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow udder-aws to access your camera.",
+          "microphonePermission": "Allow udder-aws to access your microphone.",
+          "recordAudioAndroid": true
+        }
+      ],
+      "expo-video"
     ],
     "experiments": {
       "typedRoutes": true
