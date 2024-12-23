@@ -10,10 +10,16 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npm install
    ```
 
-2. Start the app
+2. Prebuild
 
    ```bash
-    npx expo start
+    npx expo prebuild
+   ```
+
+3. Start
+
+   ```bash
+    yarn ios
    ```
 
 In the output, you'll find options to open the app in a
